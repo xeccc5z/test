@@ -11,8 +11,27 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <snapshotRepository>
+            <id>bny</id>
+            <name>snapshotrepo</name>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+            <id>bny</id>
+            <name>releaserepo</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
+  <repositories>
+    <repository>
+            <id>bny</id>
+            <name>remoterepo</name>
+        <url>http://localhost:8081/repository/RemoteRepo/</url>
+    </repository>
+  </repositories>
 </project>
